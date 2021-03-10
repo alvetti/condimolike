@@ -12,7 +12,7 @@ body{
     font-family: 'Montserrat', sans-serif;
     a{
         text-decoration: none;
-        transition: all .3s ease-in-out;
+        transition: color .3s ease-in-out;
     }
     .redes-line1{
         background: url(../images/bg1.jpg) center;
@@ -21,6 +21,16 @@ body{
         .redes-line1__logo{
             width: 50%;
             float: left;
+            animation-duration: 1s;
+            animation-name: logo-slide;
+        }
+        @keyframes logo-slide {
+            from{
+                margin-left: -50%;
+            }
+            to{
+                margin-left: 0;
+            }
         }
         .redes-line1__menu{
             width: 50%;
@@ -51,6 +61,16 @@ body{
                 float: right;
                 margin-top: 10px;
                 margin-right: 20px;
+                animation-duration: 2s;
+                animation-name: arrow-slide;
+            }
+            @keyframes arrow-slide {
+                from{
+                    margin-right: 250%;
+                }
+                to{
+                    margin-right: 20px;
+                }
             }
         }
         .redes-line1__center{
@@ -63,6 +83,18 @@ body{
             margin: 0 auto;
             position: relative;
             top: -85px;
+            animation-duration: 2s;
+                animation-name: center-slide;
+                @keyframes center-slide{
+                    from{
+                        top: -25px;
+                        opacity: 0;
+                    }
+                    to{
+                        top: -85px;
+                        opacity: 1;
+                    }
+                }
             .redes-line1__center--potencia{
                 width: 18%;
                 img{
@@ -134,6 +166,12 @@ body{
                 left: calc(50% - 40px);
                 img{
                     display: block;
+                    transition: all .5s ease-in-out;
+                }
+                &:hover{
+                    img{
+                        transform: scale(1.2);
+                    }
                 }
             }
         }
@@ -142,6 +180,9 @@ body{
         background: url(/assets/images/bg2.jpg);
         overflow: hidden;
         display: flex;
+        .redes-line2__text--circles{
+            opacity: 0;
+        }
         .redes-line2__text{
             width: 60%;
             .redes-line2__text--text{
@@ -177,6 +218,7 @@ body{
             background: url(/assets/images/hand.png) left no-repeat;
             background-size: contain;
             position: relative;
+            opacity: 0;
             .redes-line2__image--contact{
                 width: 40%;
                 text-align: center;
@@ -210,6 +252,39 @@ body{
             .line{
                 img{
                     width: 100%;
+                }
+            }
+        }
+        &.fx_line2{
+            .redes-line2__text--circles{
+                animation-duration: 1s;
+                animation-name: circles-slide;
+                margin-left: 0;
+                opacity: 1;
+            }
+            @keyframes circles-slide{
+                from{
+                    margin-left:-50%;
+                    opacity: 0;
+                    transform: rotate(45deg);
+                }
+                to{
+                    margin-left: 0;
+                    opacity: 1;
+                    transform: rotate(0deg);
+                }
+            }
+            .redes-line2__image{
+                animation-duration: 1.5s;
+                animation-name: hands-fade;
+                opacity: 1;
+                @keyframes hands-fade{
+                    from{
+                        opacity: 0;
+                    }
+                    to{
+                        opacity: 1;
+                    }
                 }
             }
         }
