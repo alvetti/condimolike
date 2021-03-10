@@ -12,6 +12,7 @@ body{
     font-family: 'Montserrat', sans-serif;
     a{
         text-decoration: none;
+        transition: all .3s ease-in-out;
     }
     .redes-line1{
         background: url(../images/bg1.jpg) center;
@@ -40,6 +41,9 @@ body{
                         letter-spacing: 2px;
                         margin:45px 35px;
                         display: block;
+                        &:hover{
+                            color: $c-green;
+                        }
                     }
                 }
             }
@@ -185,6 +189,12 @@ body{
                     padding: 0;
                     li{
                         display: inline-block;
+                        a{
+                            padding: 0 2px;
+                            &:hover{
+                                opacity: .5;
+                            }
+                        }
                     }
                 }
             }
@@ -193,6 +203,9 @@ body{
                 margin-top: 10px;
                 display: block;
                 margin-bottom: 10px;
+                &:hover{
+                    opacity: .5;
+                }
             }
             .line{
                 img{
