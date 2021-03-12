@@ -295,7 +295,7 @@ body{
         }
     }
     .redes-line2{
-        background: url(/assets/images/bg2.jpg);
+        background: url(../images/bg2.jpg);
         background-size: cover;
         overflow: hidden;
         display: flex;
@@ -385,7 +385,7 @@ body{
         }
         .redes-line2__image{
             width: 40%;
-            background: url(/assets/images/hand.png) left no-repeat;
+            background: url(../images/hand.png) left no-repeat;
             background-size: contain;
             position: relative;
             opacity: 0;
@@ -470,7 +470,7 @@ body{
         }
     }
     .redes-contacto{
-        background: url(/assets/images/bg1_2.jpg) center repeat-y;
+        background: url(../images/bg1_2.jpg) center repeat-y;
         width: 50%;
         border-radius: 10px;
         margin: 0 auto;
@@ -545,6 +545,7 @@ body{
                 button{
                     background: $c-white;
                     color: $c-purple;
+                    width: auto;
                     text-align: center;
                     border: 1px solid #e9e9e9;
                     font-family: 'Montserrat', sans-serif;
@@ -556,7 +557,7 @@ body{
                     border-radius: 20px;
                     margin-top: 40px;
                     cursor: pointer;
-                    transition: color .5s ease-in-out;
+                    transition: all .5s ease-in-out;
                     &:hover{
                         background: $c-purple;
                         color: $c-white;
@@ -565,4 +566,23 @@ body{
             }
         }
     }
+}
+.text-center{
+    text-align: center;
+}
+.loader {
+    margin: 30px auto 0px auto;
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid $c-purple;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+}
+.displaynone {
+  display:none;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
